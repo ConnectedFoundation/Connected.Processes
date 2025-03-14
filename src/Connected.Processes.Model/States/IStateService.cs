@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.States;
 
-[Service, ServiceUrl(Urls.States)]
+[Service, ServiceUrl(ProcessesUrls.States)]
 public interface IStateService
 {
 	Task<ImmutableList<IStateAction>> QueryActions(IPrimaryKeyDto<long> dto);

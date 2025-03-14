@@ -11,6 +11,7 @@ public enum ActivityStatus
 public interface IActivity : IEntity<int>
 {
 	int Workflow { get; init; }
-	int Operation { get; init; }
+	int? Operation { get; init; }
+	int Index { get; init; }
 	ActivityStatus Status { get; init; }
 }

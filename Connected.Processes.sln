@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connected.Processes.Sdk", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connected.Processes.States", "src\Connected.Processes.States\Connected.Processes.States.csproj", "{CAA4BC32-14E8-4D89-9441-33F6060DFEE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connected.Processes.Design", "src\Connected.Processes.Design\Connected.Processes.Design.csproj", "{2982B8C6-2DAD-4CCD-8113-81039AFD65F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CAA4BC32-14E8-4D89-9441-33F6060DFEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA4BC32-14E8-4D89-9441-33F6060DFEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA4BC32-14E8-4D89-9441-33F6060DFEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2982B8C6-2DAD-4CCD-8113-81039AFD65F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2982B8C6-2DAD-4CCD-8113-81039AFD65F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2982B8C6-2DAD-4CCD-8113-81039AFD65F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2982B8C6-2DAD-4CCD-8113-81039AFD65F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

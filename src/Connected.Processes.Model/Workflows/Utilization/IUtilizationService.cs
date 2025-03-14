@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.Workflows.Utilization;
 
-[Service, ServiceUrl(Urls.Utilization)]
+[Service, ServiceUrl(ProcessesUrls.Utilization)]
 public interface IUtilizationService
 {
 	[ServiceOperation(ServiceOperationVerbs.Put)]

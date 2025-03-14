@@ -20,7 +20,7 @@ public interface IOperation : IEntity<int>
 	int Parent { get; init; }
 	string Code { get; init; }
 	string Name { get; init; }
-	string Description { get; init; }
+	string? Description { get; init; }
 	int Index { get; init; }
 	ActivationBehavior Activation { get; init; }
 	CompletionBehavior Completion { get; init; }

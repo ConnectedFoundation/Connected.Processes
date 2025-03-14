@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.Workflows.Consumptions;
 
-[Service, ServiceUrl(Urls.Consumptions)]
+[Service, ServiceUrl(ProcessesUrls.Consumptions)]
 public interface IConsumptionService
 {
 	[ServiceOperation(ServiceOperationVerbs.Put)]

@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.Workflows.Production;
 
-[Service, ServiceUrl(Urls.Production)]
+[Service, ServiceUrl(ProcessesUrls.Production)]
 public interface IProductionService
 {
 	[ServiceOperation(ServiceOperationVerbs.Put)]

@@ -5,7 +5,7 @@ namespace Connected.Processes.Design;
 public enum VersionStatus
 {
 	Design = 1,
-	Valid = 2,
+	Active = 2,
 	Archive = 3
 }
 public interface IProcessVersion : IEntity<int>
