@@ -5,7 +5,8 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.Design;
 
-internal sealed class ProcessVersionService(IServiceProvider services) : Service(services), IProcessVersionService
+internal sealed class ProcessVersionService(IServiceProvider services)
+	: Service(services), IProcessVersionService
 {
 	public async Task Delete(IPrimaryKeyDto<int> dto)
 	{
@@ -17,7 +18,7 @@ internal sealed class ProcessVersionService(IServiceProvider services) : Service
 		return await Invoke(GetOperation<InsertVersion>(), dto);
 	}
 
-	public async Task<ImmutableList<IProcessVersion>> Query(IHeadDto<int> dto)
+	public async Task<IImmutableList<IProcessVersion>> Query(IHeadDto<int> dto)
 	{
 		return await Invoke(GetOperation<QueryVersions>(), dto);
 	}

@@ -29,11 +29,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Connected.Sdk" Version="1.0.4-beta1" />
+	  <Folder Include="States\Dtos\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="States\Dtos\" />
+	  <ProjectReference Include="..\..\..\Connected.Core\src\Connected.Sdk\Connected.Sdk.csproj" />
 	</ItemGroup>
 
 </Project>

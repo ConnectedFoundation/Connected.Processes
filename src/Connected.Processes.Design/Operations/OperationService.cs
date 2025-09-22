@@ -18,7 +18,7 @@ internal sealed class OperationService(IServiceProvider services)
 		return await Invoke(GetOperation<Insert>(), dto);
 	}
 
-	public async Task<ImmutableList<IOperation>> Query(IHeadDto<int> dto)
+	public async Task<IImmutableList<IOperation>> Query(IHeadDto<int> dto)
 	{
 		return await Invoke(GetOperation<Query>(), dto);
 	}

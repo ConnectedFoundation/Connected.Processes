@@ -12,7 +12,7 @@ internal sealed class Delete(IOperationService operations, IStorageProvider stor
 	{
 		SetState(await operations.Select(Dto));
 
-		await storage.Open<Operation>().Update(Dto.AsEntity<Operation>(State.Deleted));
+		await storage.Open<Operation>().Update(Dto.AsEntity<Operation>(State.Delete));
 		await cache.Remove(Dto.Id);
 		await events.Deleted(this, operations, Dto.Id);
 	}

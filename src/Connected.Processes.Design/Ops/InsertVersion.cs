@@ -11,7 +11,7 @@ internal sealed class InsertVersion(IProcessVersionService versions, IStoragePro
 {
 	protected override async Task<int> OnInvoke()
 	{
-		var result = await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.New)) ?? throw new NullReferenceException(Strings.ErrEntityExpected);
+		var result = await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.Add)) ?? throw new NullReferenceException(Strings.ErrEntityExpected);
 
 		await events.Inserted(this, versions, result.Id);
 

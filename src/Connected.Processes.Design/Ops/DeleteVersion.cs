@@ -12,7 +12,7 @@ internal sealed class DeleteVersion(IProcessVersionService versions, IStoragePro
 	{
 		SetState(await versions.Select(Dto));
 
-		await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.Deleted));
+		await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.Delete));
 		await cache.Remove(Dto.Id);
 		await events.Deleted(this, versions, Dto.Id);
 	}

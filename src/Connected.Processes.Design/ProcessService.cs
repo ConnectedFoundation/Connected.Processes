@@ -5,7 +5,8 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.Design;
 
-internal sealed class ProcessService(IServiceProvider services) : Service(services), IProcessService
+internal sealed class ProcessService(IServiceProvider services)
+	: Service(services), IProcessService
 {
 	public async Task Delete(IPrimaryKeyDto<int> dto)
 	{
@@ -17,7 +18,7 @@ internal sealed class ProcessService(IServiceProvider services) : Service(servic
 		return await Invoke(GetOperation<Insert>(), dto);
 	}
 
-	public async Task<ImmutableList<IProcess>> Query(IQueryDto? dto)
+	public async Task<IImmutableList<IProcess>> Query(IQueryDto? dto)
 	{
 		return await Invoke(GetOperation<Query>(), dto ?? QueryDto.NoPaging);
 	}

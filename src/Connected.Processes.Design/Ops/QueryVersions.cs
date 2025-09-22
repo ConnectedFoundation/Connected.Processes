@@ -6,9 +6,9 @@ using System.Collections.Immutable;
 namespace Connected.Processes.Design.Ops;
 
 internal sealed class QueryVersions(IStorageProvider storage)
-	: ServiceFunction<IHeadDto<int>, ImmutableList<IProcessVersion>>
+	: ServiceFunction<IHeadDto<int>, IImmutableList<IProcessVersion>>
 {
-	protected override async Task<ImmutableList<IProcessVersion>> OnInvoke()
+	protected override async Task<IImmutableList<IProcessVersion>> OnInvoke()
 	{
 		return await storage.Open<ProcessVersion>().AsEntities<IProcessVersion>(f => f.Process == Dto.Head);
 	}

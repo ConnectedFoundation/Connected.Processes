@@ -12,7 +12,7 @@ internal sealed class Delete(IProcessService processes, IStorageProvider storage
 	{
 		SetState(await processes.Select(Dto));
 
-		await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.Deleted));
+		await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.Delete));
 		await cache.Remove(Dto.Id);
 		await events.Deleted(this, processes, Dto.Id);
 	}

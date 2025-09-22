@@ -21,5 +21,5 @@ public interface IProcessService
 	Task<IProcess?> Select(IPrimaryKeyDto<int> dto);
 
 	[ServiceOperation(ServiceOperationVerbs.Get | ServiceOperationVerbs.Post)]
-	Task<ImmutableList<IProcess>> Query(IQueryDto? dto);
+	Task<IImmutableList<IProcess>> Query(IQueryDto? dto);
 }

@@ -22,5 +22,5 @@ public interface IProcessVersionService
 	Task<IProcessVersion?> Select(IPrimaryKeyDto<int> dto);
 
 	[ServiceOperation(ServiceOperationVerbs.Get | ServiceOperationVerbs.Post)]
-	Task<ImmutableList<IProcessVersion>> Query(IHeadDto<int> dto);
+	Task<IImmutableList<IProcessVersion>> Query(IHeadDto<int> dto);
 }

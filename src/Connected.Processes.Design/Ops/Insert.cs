@@ -11,7 +11,7 @@ internal sealed class Insert(IProcessService processes, IStorageProvider storage
 {
 	protected override async Task<int> OnInvoke()
 	{
-		var result = await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.New)) ?? throw new NullReferenceException(Strings.ErrEntityExpected);
+		var result = await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.Add)) ?? throw new NullReferenceException(Strings.ErrEntityExpected);
 
 		await events.Inserted(this, processes, result.Id);
 

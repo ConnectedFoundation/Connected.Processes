@@ -21,5 +21,5 @@ public interface IOperationService
 	Task<IOperation?> Select(IPrimaryKeyDto<int> dto);
 
 	[ServiceOperation(ServiceOperationVerbs.Get | ServiceOperationVerbs.Post)]
-	Task<ImmutableList<IOperation>> Query(IHeadDto<int> dto);
+	Task<IImmutableList<IOperation>> Query(IHeadDto<int> dto);
 }

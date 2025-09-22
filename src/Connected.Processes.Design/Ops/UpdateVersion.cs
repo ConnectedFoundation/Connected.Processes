@@ -13,7 +13,7 @@ internal sealed class UpdateVersion(IProcessVersionService versions, IStoragePro
 	{
 		SetState(await versions.Select(Dto));
 
-		await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.Default), Dto, async () =>
+		await storage.Open<ProcessVersion>().Update(Dto.AsEntity<ProcessVersion>(State.Update), Dto, async () =>
 		{
 			await cache.Remove(Dto.Id);
 

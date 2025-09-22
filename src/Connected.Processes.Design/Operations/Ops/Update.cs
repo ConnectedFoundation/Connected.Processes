@@ -13,7 +13,7 @@ internal sealed class Update(IOperationService operations, IStorageProvider stor
 	{
 		SetState(await operations.Select(Dto));
 
-		await storage.Open<Operation>().Update(Dto.AsEntity<Operation>(State.Default), Dto, async () =>
+		await storage.Open<Operation>().Update(Dto.AsEntity<Operation>(State.Update), Dto, async () =>
 		{
 			await cache.Remove(Dto.Id);
 

@@ -13,7 +13,7 @@ internal sealed class Update(IProcessService processes, IStorageProvider storage
 	{
 		SetState(await processes.Select(Dto));
 
-		await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.Default), Dto, async () =>
+		await storage.Open<Process>().Update(Dto.AsEntity<Process>(State.Update), Dto, async () =>
 		{
 			await cache.Remove(Dto.Id);
 
