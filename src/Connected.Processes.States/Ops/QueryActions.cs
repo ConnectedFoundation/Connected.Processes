@@ -5,14 +5,15 @@ using System.Collections.Immutable;
 
 namespace Connected.Processes.States.Ops;
 internal sealed class QueryActions(IMiddlewareService middlewares)
-	: ServiceFunction<IPrimaryKeyDto<long>, ImmutableList<IStateAction>>
+	: ServiceFunction<IEntityDto, ImmutableList<IStateAction>>
 {
 	protected override async Task<ImmutableList<IStateAction>> OnInvoke()
 	{
 		var items = await middlewares.Query<IStateActionProvider>();
 		var dto = Dto.Create<IStateActionDto>();
 
-		dto.Activity = Dto.Id;
+		dto.Entity = Dto.Entity;
+		dto.EntityId = Dto.EntityId;
 
 		foreach (var item in items)
 			await item.Invoke(dto);

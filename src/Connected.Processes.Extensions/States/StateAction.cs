@@ -3,10 +3,10 @@
 namespace Connected.Processes.States;
 public record StateAction : Entity<string>, IStateAction
 {
-	public StateAction(string id, string name)
+	public StateAction(string id, string text)
 	{
 		Id = id;
-		Name = name;
+		Text = text;
 	}
-	public string Name { get; init; }
+	public string Text { get; init; }
 }

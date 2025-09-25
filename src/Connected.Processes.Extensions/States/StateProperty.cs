@@ -3,11 +3,11 @@
 namespace Connected.Processes.States;
 public record StateProperty : Entity<string>, IStateProperty
 {
-	public StateProperty(string id, string value)
+	public StateProperty(string id, string text)
 	{
 		Id = id;
-		Value = value;
+		Text = text;
 	}
 
-	public string Value { get; init; }
+	public string Text { get; init; }
 }

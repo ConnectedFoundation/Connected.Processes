@@ -1,5 +1,7 @@
-﻿namespace Connected.Processes.States;
-public interface IStateProperty
+﻿using Connected.Entities;
+
+namespace Connected.Processes.States;
+public interface IStateProperty : IEntity<string>
 {
-	string Value { get; init; }
+	string Text { get; init; }
 }

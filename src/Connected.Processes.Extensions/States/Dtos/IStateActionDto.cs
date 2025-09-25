@@ -1,8 +1,7 @@
 ﻿using Connected.Services;
 
 namespace Connected.Processes.States.Dtos;
-public interface IStateActionDto : IDto
+public interface IStateActionDto : IEntityDto
 {
-	long Activity { get; set; }
 	List<IStateAction> Items { get; set; }
 }
