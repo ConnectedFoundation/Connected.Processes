@@ -35,7 +35,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Connected.Core\src\Connected.Model\Connected.Model.csproj" />
+	  <ProjectReference Include="$(ConnectedCore)\Connected.Model\Connected.Model.csproj" />
 	</ItemGroup>
 
 </Project>
